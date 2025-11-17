@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Roll with It – Settings</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="settings-page">
+  <main>
+    <section class="settings-card">
+      <header class="settings-header">
+        <h1>Class schedule settings</h1>
+        <p class="muted">
+          Adjust the number of periods and the start / end times to match your school.
+          These settings are saved only in this browser.
+        </p>
+      </header>
+
+      <form id="scheduleForm">
+        <div class="settings-field">
+          <label for="periodCount">
+            Number of periods
+            <input id="periodCount" type="number" min="1" max="12">
+          </label>
+        </div>
+
+        <div id="periodsContainer" class="settings-periods"></div>
+
+        <div class="settings-actions">
+          <button type="submit">Save schedule</button>
+          <a href="index.html" class="settings-back-link">Back to calendar</a>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <script src="settings.js"></script>
+</body>
+</html>
+

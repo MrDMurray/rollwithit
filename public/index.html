@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Roll with It</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="hero">
+    <div>
+      <p class="eyebrow">Roll with It - By Danny Murray</p>
+      <h2>"Rolling Songs" to remind you to take the roll at the start of class </h2>
+      <p class="lede">Arm each class, pick when the reminder should play, and choose the song you want to hear.</p>
+      <div class="header-actions">
+
+      </div>
+      <div class="controls">
+        <label>
+          Reminder timing
+          <select id="reminderOffset">
+            <option value="5">5 minutes after start</option>
+            <option value="10">10 minutes after start</option>
+            <option value="15">15 minutes after start</option>
+            <option value="0">At start time</option>
+          </select>
+        </label>
+        <label>
+          Alarm song
+          <select id="songSelect"></select>
+        </label>
+        <div class="button-row">
+          <button id="previewBtn" class="ghost">Preview</button>
+          <button id="stopAlarmBtn" class="ghost">Stop alarm</button>
+		          <a href="settings.html" class="settings-link" aria-label="Adjust class times">
+          ⚙
+        </a>
+        </div>
+      </div>
+    </div>
+    <div class="status">
+      <p class="muted">Alarm status</p>
+      <p id="alarmStatus">Waiting for next class...</p>
+      <p class="muted small">Next alarm in: <span id="countdown">--:--:--</span></p>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <h2>This week</h2>
+      <div id="calendar" class="calendar"></div>
+    </section>
+  </main>
+
+  <audio id="alarmAudio" preload="auto"></audio>
+
+  <template id="dayTemplate">
+    <div class="day-card">
+      <div class="day-header">
+        <p class="muted day-name"></p>
+        <p class="date"></p>
+      </div>
+      <div class="periods"></div>
+    </div>
+  </template>
+
+  <template id="periodTemplate">
+    <div class="period">
+      <div>
+        <p class="muted period-label"></p>
+        <p class="time"></p>
+      </div>
+      <button class="toggle"></button>
+    </div>
+  </template>
+
+  <script src="app.js"></script>
+</body>
+</html>

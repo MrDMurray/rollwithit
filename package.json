@@ -1,0 +1,9 @@
+{
+  "name": "roll-with-it",
+  "version": "1.0.0",
+  "description": "Reminder site to prompt teachers to take roll.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  }
+}
